@@ -1,0 +1,14 @@
+<annotation>
+  <folder>/home/moritz/dev/fcl-cap/datasets/vector/black-white/01/pictures</folder>
+  <filename>vid-4-303.jpg</filename>
+  <path>/home/moritz/dev/fcl-cap/datasets/vector/black-white/01/pictures/vid-4-303.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>129</width>
+    <height>140</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>
