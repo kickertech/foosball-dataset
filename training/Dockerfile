@@ -9,11 +9,12 @@ RUN apt install -y \
 	pkg-config git build-essential libopencv-dev vim wget curl
 
 # build darknet
-ENV LD_LIBRARY_PATH="/usr/local/cuda/compat:${LD_LIBRARY_PATH}"
 RUN git clone https://github.com/AlexeyAB/darknet.git
 WORKDIR /app/darknet
 RUN make OPENCV=1 GPU=1 AVX=1 OPENMP=1 CUDNN=1 OPENMP=1 CUDNN_HALF=1 -j $(nproc)
 RUN chmod +x darknet && mv ./darknet /bin/darknet
 
+RUN apt install -y \
+	python3
 
-ENTRYPOINT ["/bin/darknet"]
+RUN ln -s /usr/bin/python3 /usr/bin/python

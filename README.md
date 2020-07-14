@@ -47,4 +47,13 @@ $ make label TABLE=leonhart KIND=black-green DS=83
 
 
 ## Training the Dataset
-This is not yet implemented.
+
+```
+# transform source dataset into darknet-readable format
+$ make export
+
+$ make train-docker
+
+# ...or train without docker
+$ make train
+```

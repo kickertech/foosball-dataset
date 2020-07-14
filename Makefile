@@ -31,8 +31,8 @@ export:
 		-data_dir $(DATA_DIR) \
 		-output_dir $(EXPORT_DIR)
 
-train-docker: export
+train-docker:
 	$(MAKE) -C training train-docker
 
-train: export
+train:
 	$(MAKE) -C training train
