@@ -26,10 +26,13 @@ split:
 
 .PHONY: export
 export:
-	mkdir -p $(EXPORT_DIR)
+	mkdir -p $(EXPORT_DIR)/backup
 	python ${PWD}/tools/export.py \
 		-data_dir $(DATA_DIR) \
 		-output_dir $(EXPORT_DIR)
 
-train:
-	@echo TODO. not implemented
+train-docker: export
+	$(MAKE) -C training train-docker
+
+train: export
+	$(MAKE) -C training train
