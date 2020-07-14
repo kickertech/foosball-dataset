@@ -2,8 +2,8 @@
 This repository contains labeled images of various foosball tables.
 
 Tables (so far):
-* lenhart
-* vector black-white
+* leonhart
+* vector
 
 ## Data Organization
 This dataset is organized by manufacturer. Every manufacturer has its own set of figures and color-scheme.
