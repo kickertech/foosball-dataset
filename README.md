@@ -22,13 +22,30 @@ The source of the data must be provided.
 ├── vector #
 ...
 ```
-## Labeling
+
+## Development
+
+### Prerequisites
+
+* install opencv
+* have a GPU
+* install cuda
+* python3
+
+Run the following command to setup the project on your machine:
+
+```
+$ make setup
+```
+
+### Labeling
+To start labeling images run the following command. It is recommended to split the datasets into smaller chunks (~300-400 images each). This helps with your motivation labeling the dataset aswell as the performance of the labeling program.
 
 ```bash
 $ make label TABLE=leonhart KIND=black-green DS=01
 ```
 
-## Sourcing data
+### Sourcing data
 
 1. Fetch a video file from youtube or wherever e.g. using `youtube-dl`
 2. Split the video file into frames
@@ -46,7 +63,7 @@ $ make label TABLE=leonhart KIND=black-green DS=83
 ```
 
 
-## Training the Dataset
+### Training the Dataset
 
 ```
 # transform source dataset into darknet-readable format

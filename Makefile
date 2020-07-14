@@ -9,6 +9,10 @@ OUT_DIR=$(DATA_DIR)/$(TABLE)/$(KIND)/$(DS)/out
 CLASS_LIST=${PWD}/class_list.txt
 EXPORT_DIR=${PWD}/export
 
+setup:
+	python -c "import cv2" || echo "opencv not installed" >2
+	pip install -r ./OpenLabeling/requirements.txt
+
 label:
 	python \
 		./OpenLabeling/main/main.py \
